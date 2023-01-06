@@ -1,0 +1,80 @@
+// these properties are typography color,font (weight,size,family,style,variant) ,
+// letter-spacing , word-spacing , text-align ,text-decoration
+body {
+  font-family: "Lato";
+  font-weight: 400;
+  line-height: 1.7;
+  /* font-size: 900; */
+  color: gray;
+  // padding: 3rem;
+}
+.primary-heading {
+  color: $color-white;
+  text-transform: uppercase;
+  margin-bottom: 6rem;
+  /* this for hide problem of going top in the animation */
+  backface-visibility: hidden;
+  &--main {
+    display: block;
+    letter-spacing: 3.5rem;
+    font-weight: 40rem;
+    font-size: 6rem;
+    animation-name: moveInLeft;
+    animation-duration: 2s;
+    @include respond(phone){
+      letter-spacing: 1rem;
+      font-size: 5rem;
+    }
+    /* يتأخر كم ثانية ثم يبدأ */
+    /* animation-delay: 5s;
+        عدد مرات تكرار الانميشن ده
+        animation-iteration-count: infinite; */
+  }
+  &--sub {
+    display: block;
+    letter-spacing: 1.74rem;
+    font-size: 2rem;
+    font-weight: 700;
+    animation: moveInRight 2s;
+    @include respond(phone){
+      letter-spacing: .5rem;
+    }
+    /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+    /* animation-duration: 2s; */
+    /* animation-timing-function: ease-out; */
+  }
+}
+.secondary-heading{
+  font-size: 3.5rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: transparent;
+  background-image: linear-gradient(to right,$color-primary-dark,$color-primary-light);
+  display: inline-block;
+  -webkit-background-clip: text;//make the back image just behind the text after that we make text transparent to see the image
+  transition: all .2s;
+  letter-spacing: .2rem;
+  @include respond(tab-port){
+    font-size: 3rem;
+  }
+  @include respond(phone){
+    font-size: 2.5rem;
+  }
+  &:hover{
+    transform: skewY(2deg) skewX(15deg) scale(1.1);
+                // x   y    plur
+    text-shadow:.5rem 1rem 2rem rgba($color-black,.2) ;
+  }
+}
+
+.heading-tertiary{
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: $defautl-font-size;
+}
+.pargraph{
+  font-size: $defautl-font-size;
+  &:not(:last-child){
+    margin-bottom: 3rem;
+  }
+}

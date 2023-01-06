@@ -1,0 +1,39 @@
+
+@import 'abstracts/functions';
+@import 'abstracts/mixins';
+@import 'abstracts/variables';
+
+@import 'base/base';
+@import 'base/animations';
+@import 'base/typography';
+@import 'base/utilities';
+
+@import 'layouts/navigation';
+@import 'layouts/header';
+@import 'layouts/grid';
+@import 'layouts/footer';
+
+@import 'components/button.scss';
+@import 'components/composition.scss';
+@import 'components/feature-box.scss';
+@import 'components/card.scss';
+@import 'components/story.scss';
+@import 'components/bg-video.scss';
+@import 'components/form.scss';
+@import 'components/popup.scss';
+
+
+@import 'pages/home';
+
+  /* types of layout 
+    1-fixed|static
+    2-fluid|liquid
+    3-adaptive
+    4-responsive */
+    /*
+    basic responsive design princeples
+    fluid layout
+    responsive unit
+    flexiable images
+    media queries
+    */

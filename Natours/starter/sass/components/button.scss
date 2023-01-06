@@ -1,0 +1,88 @@
+.button {
+  &,
+  &:link,
+  &:visited {
+    text-transform: uppercase;
+    text-decoration: none;
+    // width: 20rem;
+    font-size: $defautl-font-size;
+    border: none;
+    border-radius: 10rem;
+    padding: 1.5rem 4rem;
+    animation: moveInButtom 1s;
+    cursor: pointer;
+    position: relative;
+  }
+  &__white {
+    color: $color-gray-dark;
+    background-color: $color-white;
+    &::after {
+      background-color: $color-white;
+    }
+  }
+  &__green {
+    color: $color-white;
+    background-color: $color-primary;
+    &::after {
+      background-color: $color-primary;
+    }
+  }
+  /*  */
+  &:hover {
+    /* لاننا نبيه يرتفع نعطيه قيمه سالبه */
+    transform: translateY(-0.3rem);
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+    /* animation: zoomOut 3s ease-in 1s 0; */
+  }
+  /* يتنفذ اذا ضغطت على البتن ينزل تحت */
+  &:active {
+    transform: translateY(-0.1rem);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+  }
+  /* add virtual element right after element that we are selecting */
+  &::after {
+    /* this property is necessary */
+    content: "";
+    /* display shoud be the same of the element that it is behind them */
+    display: inline-block;
+    /* because pseudo element is treated like a child of the element */
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    // background-color: white;
+    border-radius: 10rem;
+    /* transition: margin-right 3s; */
+    transition: all 0.4s;
+  }
+  &:hover::after {
+    transform: scale(1.5);
+    opacity: 0;
+  }
+}
+.btn-text {
+  &:link,
+  &:visited {
+    // btn does not have :link and :visited psodo class this is for anchor
+    font-size: $defautl-font-size;
+    color: $color-primary-dark;
+    display: inline-block;
+    text-decoration: none;
+    border-bottom: 1px solid $color-primary;
+    padding: 3px;
+    transition: all 0.2s;
+  }
+  &:hover {
+    color: $color-white;
+    background-color: $color-primary;
+    // transform: scale(2.2);
+    box-shadow: 0 1rem 2rem rgba($color-black, 0.15);
+    transform: translateY(-2px); //scale(-2.2);
+  }
+  &:active {
+    box-shadow: 0 1rem 2rem rgba($color-black, 0.15);
+    transform: translateY(0px); //scale(-2.2);
+  }
+}

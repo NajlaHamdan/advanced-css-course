@@ -1,0 +1,51 @@
+.footer{
+    background-color: $color-gray-light-3;
+    font-size: 1.4rem;
+    padding: 10rem 0;
+    &__logo{
+        width: 15rem;
+    }
+    &__navigation{
+        padding-top:2rem ;
+        border-top: 1px solid gray;
+        display: inline-block;
+        @include respond(tab-port){
+            width: 100%;
+            text-align: center;
+            // float: none;
+        }
+    }
+    &__list{
+        list-style: none;
+        text-transform: uppercase;
+    }
+    &__item{
+        display: inline;
+        &:not(:last-child){
+            margin-right: 1rem;
+        }
+    }
+    &__link{
+        text-decoration: none;
+        color: gray;
+        background-color: $color-gray-light-3;
+        transition: all .2s;
+        // transform does not work without display:inline-block
+        display: inline-block;
+        &:hover{
+            color:$color-primary;
+            transform: rotate(5deg) scale(1.4);
+            box-shadow: 0 1rem 2rem rgba($color: #000000, $alpha: .4);
+        }
+    }
+    &__copyright{
+        padding-top:2rem ;
+        border-top: 1px solid gray;
+        width: 80%;
+        float: right;
+        @include respond(tab-port){
+            width: 100%;
+            float: none;
+        }
+    }
+}
