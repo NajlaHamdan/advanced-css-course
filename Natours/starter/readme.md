@@ -38,11 +38,11 @@ for example : some time we need to select element when other element is focus or
               <use xlink:href="img/sprite.svg#icon-magnifying-glass"></use>
             </svg>
           </button>
-        </form>
+</form>
 ```
 here when the input is focus we want to change the background color for the button
 ```
 .search__input:focus + .search__button {
-background-color:red;
+    background-color:red;
 }
 ```
