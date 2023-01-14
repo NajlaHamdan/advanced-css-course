@@ -26,3 +26,23 @@ npm-run-all tasksName spreated by comma
   this line say our website should be rendered with width of the device
   width of the content should be the device content
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+## selectors in css
+- select the adjecent element 
+for example : some time we need to select element when other element is focus or in other events like here
+```
+<form action="" class="search">
+   <input type="text" class="search__input" placeholder="Search hotels" />
+   <button class="search__button">
+         <svg class="search__icon">
+              <use xlink:href="img/sprite.svg#icon-magnifying-glass"></use>
+         </svg>
+   </button>
+</form>
+```
+here when the input is focus we want to change the background color for the button
+```
+.search__input:focus + .search__button {
+    background-color:red;
+}
+```
