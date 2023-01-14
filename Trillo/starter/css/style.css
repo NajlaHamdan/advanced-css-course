@@ -26,8 +26,9 @@ Grey dark 3: #999
   --color-gray-dark-1:#333;
   --color-gray-dark-2:#777;
   --color-gray-dark-3:#999;
-  --shadow-box:0 2rem 6rem rgba(0,0,0,.3)
-; }
+  --shadow-box:0 2rem 6rem rgba(0,0,0,.3);
+  --shadow-light:0 2rem 5rem rgba(0,0,0,.06);
+  --line:1px solid var(--color-gray-light-2); }
 
 * {
   margin: 0;
@@ -167,32 +168,88 @@ body {
   text-align: center;
   padding: 2.5rem; }
 
-.images {
-  display: flex;
-  width: 100%; }
-  .images > * {
-    width: 33.3%; }
+.gallary {
+  display: flex; }
+  .gallary__photo {
+    width: 100%;
+    display: block; }
 
-.second-header {
-  font-size: 1.6rem;
-  background-color: #fff;
+.overview {
   display: flex;
-  justify-content: space-between;
+  background-color: #fff;
   align-items: center;
-  padding: 2rem; }
-  .second-header p {
-    text-transform: uppercase; }
-  .second-header .right {
+  border-bottom: var(--line); }
+  .overview__heading {
+    font-size: 2.25rem;
+    font-weight: 300;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding: 1.5rem 3rem; }
+  .overview__stars {
     display: flex;
-    align-items: center;
-    text-decoration: underline;
-    color: var(--color-primary); }
-    .second-header .right div {
-      background-color: var(--color-primary);
-      color: #fff;
-      display: flex;
-      flex-direction: column;
-      text-align: center; }
+    margin-right: auto; }
+  .overview__location {
+    display: flex;
+    font-size: 1.2rem;
+    align-items: center; }
+  .overview__icon-location {
+    margin-right: .5rem; }
+  .overview__rating {
+    font-size: 1.5rem;
+    padding: 0 2.25rem;
+    color: #fff;
+    background-color: var(--color-primary);
+    align-self: stretch;
+    margin-left: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
+    .overview__rating-count {
+      font-size: .8rem;
+      text-transform: uppercase; }
+    .overview__rating-avarage {
+      margin-bottom: -3px;
+      font-size: 2.25rem;
+      font-weight: 200; }
+  .overview__icon-star, .overview__icon-location {
+    width: 1.75rem;
+    height: 1.75rem;
+    fill: var(--color-primary); }
+
+.btn-inline {
+  border: none;
+  background-color: transparent;
+  border-bottom: 1px solid currentColor;
+  padding-bottom: 2px;
+  display: inline-block;
+  color: var(--color-primary);
+  font-size: inherit;
+  cursor: pointer; }
+  .btn-inline:hover {
+    color: var(--color-gray-dark-1); }
+  .btn-inline:focus {
+    animation: pulstate 1s 0s infinite; }
+
+.recommend {
+  display: flex; }
+  .recommend__photo {
+    border-radius: 50%;
+    width: 20%; }
+
+.list {
+  list-style: none;
+  display: flex;
+  flex-direction: column; }
+
+@keyframes pulstate {
+  0% {
+    transform: scale(1); }
+  50% {
+    transform: scale(1.05);
+    box-shadow: 0 1rem 4rem rgba(0, 0, 0, 0.25); }
+  100% {
+    transform: scale(1); } }
 
 /*
 COLORS
@@ -222,8 +279,9 @@ Grey dark 3: #999
   --color-gray-dark-1:#333;
   --color-gray-dark-2:#777;
   --color-gray-dark-3:#999;
-  --shadow-box:0 2rem 6rem rgba(0,0,0,.3)
-; }
+  --shadow-box:0 2rem 6rem rgba(0,0,0,.3);
+  --shadow-light:0 2rem 5rem rgba(0,0,0,.06);
+  --line:1px solid var(--color-gray-light-2); }
 
 * {
   margin: 0;
@@ -255,7 +313,7 @@ body {
     font-size: 1.4rem;
     height: 7rem;
     background-color: #fff;
-    border-bottom: 1px solid var(--color-gray-light-2);
+    border-bottom: var(--line);
     display: flex;
     justify-content: space-between;
     align-items: center; }
@@ -266,9 +324,19 @@ body {
       flex-direction: column;
       justify-content: space-between;
       flex: 0 0 20%;
-      height: 80rem;
       background-color: var(--color-gray-dark-1); }
     .container .content .hotel-view {
-      flex: 1;
-      background-color: orangered;
-      height: 80rem; }
+      flex: 1; }
+  .container .detail {
+    display: flex;
+    padding: 4.5rem; }
+  .container .description {
+    font-size: 1.4rem;
+    flex: 0 0 60%;
+    background-color: #fff;
+    margin-right: 4.5rem;
+    border-bottom: var(--line);
+    box-shadow: var(--shadow-light); }
+  .container .user-reviews {
+    flex: 1;
+    background-color: cornflowerblue; }
