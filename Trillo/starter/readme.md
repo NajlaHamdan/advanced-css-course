@@ -50,4 +50,13 @@
   shortcut for flex grow , shrink and basis
 
   # different between icon fonts and SVG
+  icon fonts problem
+  - in fact it just a hack to display icons which are like images using a font .
+  - icon fonts fail more than you think and in that case the browser will displays a blank square .
+  - screenreaders for blind people try to read icon font and of course fail to read icon font
+better alternative for icon fonts is SVG
   SVG stands for scalable vector graphics
+  SVG is just a way to writing a vector graphics with code .
+   resourse to find , generate and convert icon font to  SVGs is icomoon.io .
+
+   -- the goal of having one sprite img file is to have one http request

@@ -18,7 +18,11 @@
       <header class="header">
         <img src="img/logo.png" alt="" class="header__logo" />
         <form action="" class="search">
-          <input type="text" class="search__input" />
+          <input
+            type="text"
+            class="search__input"
+            placeholder="Search hotels"
+          />
           <button class="search__button">
             <svg class="search__icon">
               <use xlink:href="img/sprite.svg#icon-magnifying-glass"></use>
@@ -37,16 +41,73 @@
               <use xlink:href="img/sprite.svg#icon-chat"></use>
             </svg>
             <span class="user-nav__notification">13</span>
-        </div>
-        <div class="user-nav__user">
-            <img src="img/user.jpg" alt="" class="user-nav__user-photo">
+          </div>
+          <div class="user-nav__user">
+            <img
+              src="img/user.jpg"
+              alt="user photo"
+              class="user-nav__user-photo"
+            />
             <span class="user-nav__user-name">Jonas</span>
           </div>
         </nav>
       </header>
       <div class="content">
-        <nav class="sidebar">sidebar</nav>
-        <main class="hotel-view">hotel-view</main>
+        <nav class="sidebar">
+          <ul class="side-nav">
+            <li class="side-nav__item">
+              <a href="#" class="side-nav__link">
+                <svg class="side-nav__icon">
+                  <use xlink:href="img/sprite.svg#icon-home"></use>
+                </svg>
+                <span>hotel</span>
+              </a>
+            </li>
+            <li class="side-nav__item">
+              <a href="#" class="side-nav__link">
+                <svg class="side-nav__icon">
+                  <use xlink:href="img/sprite.svg#icon-aircraft-take-off"></use>
+                </svg>
+                <span>flight</span>
+              </a>
+            </li>
+            <li class="side-nav__item">
+              <a href="#" class="side-nav__link">
+                <svg class="side-nav__icon">
+                  <use xlink:href="img/sprite.svg#icon-key"></use>
+                </svg>
+                <span>car rental</span>
+              </a>
+            </li>
+            <li class="side-nav__item">
+              <a href="#" class="side-nav__link">
+                <svg class="side-nav__icon">
+                  <use xlink:href="img/sprite.svg#icon-map"></use>
+                </svg>
+                <span>tours</span>
+              </a>
+            </li>
+          </ul>
+          <div class="legal">&copy; 2023 by trillo . All rights reserved.</div>
+        </nav>
+        <main class="hotel-view">
+          <div class="images">
+            <img src="img/hotel-1.jpg" alt="" />
+            <img src="img/hotel-2.jpg" alt="" />
+            <img src="img/hotel-3.jpg" alt="" />
+          </div>
+          <div class="second-header">
+            <p>hotel las palmes</p>
+            <div class="right">
+              <p>Albufeira, Portugal</p>
+              <div>
+                <P>8.6</P>
+                <span>429 votes</span>
+              </div>
+            </div>
+          </div>
+          hotel-view
+        </main>
       </div>
     </div>
   </body>
