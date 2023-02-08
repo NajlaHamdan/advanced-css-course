@@ -16,47 +16,61 @@ Grey dark 3: #999
 
 */
 // like html selector but with higher spacificety
-:root{
-    // custome property in css
-    // does not need to preprocessor
-    // we can mainpulate it with javaScript
-    // can inherited
-    // defiend within declaration block {} 
-    --color-primary:#eb2f64;
-    --color-primary-light:#FF3366;
-    --color-primary-dark:#BA265D;
+:root {
+  // custome property in css
+  // does not need to preprocessor
+  // we can mainpulate it with javaScript
+  // can inherited
+  // defiend within declaration block {}
+  --color-primary: #eb2f64;
+  --color-primary-light: #ff3366;
+  --color-primary-dark: #ba265d;
 
-    --color-gray-light-1:#faf9f9;
-    --color-gray-light-2:#f4f2f2;
-    --color-gray-light-3:#f0eeee;
-    --color-gray-light-4:#ccc;
+  --color-gray-light-1: #faf9f9;
+  --color-gray-light-2: #f4f2f2;
+  --color-gray-light-3: #f0eeee;
+  --color-gray-light-4: #ccc;
 
-    --color-gray-dark-1:#333;
-    --color-gray-dark-2:#777;
-    --color-gray-dark-3:#999;
+  --color-gray-dark-1: #333;
+  --color-gray-dark-2: #777;
+  --color-gray-dark-3: #999;
 
-    --shadow-box:0 2rem 6rem rgba(0,0,0,.3);
-    --shadow-light:0 2rem 5rem rgba(0,0,0,.06);
+  --shadow-box: 0 2rem 6rem rgba(0, 0, 0, 0.3);
+  --shadow-light: 0 2rem 5rem rgba(0, 0, 0, 0.06);
 
-    --line:1px solid var(--color-gray-light-2);
+  --line: 1px solid var(--color-gray-light-2);
 }
-*{
-    margin: 0;
-    padding: 0;
+$bp-largest: 75em; //1200/16
+$bp-large: 68.75em; //1100/16
+$bp-meduiam: 56.25em; //900/16
+$bp-small: 37.5em; //600/16
+$bp-smallest: 31.25em; //500/16
+* {
+  margin: 0;
+  padding: 0;
 }
-*,*::after,*::before{
-    box-sizing: inherit;
-
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
 }
-html{
-    font-size: 62.5%;
-    box-sizing: border-box;}
-body{
-    font-family: "Open Sans" sans-serif;
-    line-height: 1.4;
-    font-weight: 400;
-    color: var(--color-gray-dark-2);
-    background-image: linear-gradient(to right bottom,var(--color-primary-dark),var(--color-primary-light));
-    background-size: cover;
-    background-repeat: no-repeat;
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+  @media only screen and(max-width:$bp-large) {
+    font-size: 50%;
+  }
+}
+body {
+  font-family: "Open Sans" sans-serif;
+  line-height: 1.4;
+  font-weight: 400;
+  color: var(--color-gray-dark-2);
+  background-image: linear-gradient(
+    to right bottom,
+    var(--color-primary-dark),
+    var(--color-primary-light)
+  );
+  background-size: cover;
+  background-repeat: no-repeat;
 }
