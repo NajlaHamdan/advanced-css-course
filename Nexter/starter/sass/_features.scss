@@ -8,22 +8,23 @@
     grid-gap:6rem;
     align-items: start;
     // grid-template-rows: repaet(2,1fr);
-    & .feature{
-        display: grid;
-        grid-template-columns: min-content 1fr;
-        grid-column-gap: 2.5rem;
-        grid-row-gap: 1.5rem;
-        justify-items: center;
-        &__icon{
-            fill:$color-primary;
-            width: 4.5rem;
-            height: 4.5rem;
-            // -1 does not work with implicit grid we should spacify the rows to work with -1 (explicit)
-            grid-row:1/span 2;
-            transform: translateY(.5rem);
-        }
-        &__text{
-            font-size: 1.7rem;
-        }
-    }
+    
+    
 }
+.feature{
+    display: grid;
+    grid-template-columns: min-content 1fr;
+    grid-column-gap: 2.5rem;
+    grid-row-gap: 1.5rem;
+    justify-items: center;
+    &__icon{
+        fill:$color-primary;
+        width: 4.5rem;
+        height: 4.5rem;
+        // -1 does not work with implicit grid we should spacify the rows to work with -1 (explicit)
+        grid-row:1/span 2;
+        transform: translateY(.5rem);
+    }
+    &__text{
+        font-size: 1.7rem;
+    }}
