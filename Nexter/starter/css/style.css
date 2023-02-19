@@ -62,7 +62,27 @@ body {
 .sidebar {
   background-color: #c69963;
   grid-column: sidebar-start / sidebar-end;
-  grid-row: 1/-1; }
+  grid-row: 1/-1;
+  display: flex;
+  justify-content: center; }
+
+.btn-nav {
+  border: none;
+  border-radius: 0;
+  background-color: #fff;
+  width: 5rem;
+  height: 0.2rem;
+  margin-top: 3rem; }
+  .btn-nav::after, .btn-nav::before {
+    content: "";
+    width: 5rem;
+    height: 0.2rem;
+    display: block;
+    background-color: #fff; }
+  .btn-nav::after {
+    transform: translateY(-1.5rem); }
+  .btn-nav::before {
+    transform: translateY(1.3rem); }
 
 .header {
   background-color: #101d2c;
