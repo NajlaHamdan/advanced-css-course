@@ -1,51 +1,66 @@
-.header{
-    background-image:linear-gradient(rgba($color-secondary,.9),rgba($color-secondary,.9)), url(../img/hero.jpeg);
-    background-size:cover;
-    background-position: center;
-    grid-column: sidebar-end/col-end 6;
-    padding: 4rem 6rem;
+.header {
+  background-image: linear-gradient(
+      rgba($color-secondary, 0.9),
+      rgba($color-secondary, 0.9)
+    ),
+    url(../img/hero.jpeg);
+  background-size: cover;
+  background-position: center;
+  grid-column: sidebar-end/col-end 6;
+  @media only screen and (max-width: $bp-large) {
+    grid-column: full-start/col-end 6;
+  }
+  @media only screen and (max-width: $bp-medium) {
+    grid-column: full-start/-1;
+  }
+  @media only screen and (max-width: $bp-small) {
+    padding: 5rem;
+  }
+  padding: 4rem 6rem;
+  display: grid;
+  grid-template-rows: 1fr min-content 6rem 1fr 1fr;
+  grid-template-columns: minmax(min-content, max-content);
+  align-items: start;
+  justify-items: start;
+  justify-content: center;
+  // align-content: center;
+  gap: 1.5rem;
+  // grid-gap:1rem
+  // display: flex;
+  // flex-direction: column;
+  // align-items: start;
+  // justify-content: center;
+  // gap: 1rem;
+  &__logo {
+    justify-self: center;
+    height: 3rem;
+  }
+  // &__seenon{
+  &__seenon-text {
     display: grid;
-    grid-template-rows: 1fr min-content 6rem 1fr 1fr;
-    align-items: start;
-    justify-items: start;
-    justify-content: center;
-    align-content: center;
-    grid-gap:1.5rem;
-    // grid-gap:1rem
-    // display: flex;
-    // flex-direction: column;
-    // align-items: start;
-    // justify-content: center;
-    // gap: 1rem;
-    &__logo{
-        justify-self: center;
-        // align-self: center;
-        height: 3rem;
+    font-size: 1.5rem;
+    color: $color-grey-light-2;
+    grid-template-columns: 1fr max-content 1fr;
+    // align-items: center;
+    gap: 2rem;
+    &::before,
+    &::after {
+      content: "";
+      height: 8px;
+      display: block;
+      background-color: #fff;
     }
-    &__seenon{
-        &-text{
-            display: grid;
-            font-size: 1.6rem;
-            color:$color-grey-light-2;
-            grid-template-columns:  1fr max-content 1fr;
-            align-items: center;
-            &::after,
-            &::before{
-                content: "";
-                display: block;
-                height: 1px;
-                width: 20rem;
-                background-color: currentColor;
-            }
-        }
-        &-logos{
-            display: grid;
-            grid-template-columns: repeat(4,1fr);
-            justify-items: center;
-            filter: brightness(70%);
-            img{
-                height: 2.5rem;
-            }
-        }
+  }
+  &__seenon-logos {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-items: center;
+    align-items: center;
+    img {
+      filter: brightness(70%);
+      max-height: 2.5rem;
+      max-width: 100%;
     }
+    // }
+  }
 }
