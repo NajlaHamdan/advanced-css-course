@@ -14,7 +14,7 @@
     display: grid;
     grid-template-columns: min-content max-content; //repeat(2,max-content);
     gap: 2rem;
-    // margin-bottom: 5vh;
+    margin-bottom: 5vh;
     align-items: center;
     @media only screen and (max-width: $bp-medium) {
       grid-template-columns: repeat(3, min-content max-content);

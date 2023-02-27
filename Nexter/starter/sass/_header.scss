@@ -16,46 +16,45 @@
   @media only screen and (max-width: $bp-small) {
     padding: 5rem;
   }
-  padding: 4rem 6rem;
+  padding: 8rem;
+  padding-top: 4rem;
   display: grid;
   grid-template-rows: 1fr min-content 6rem 1fr 1fr;
   grid-template-columns: minmax(min-content, max-content);
-  align-items: start;
-  justify-items: start;
-  justify-content: center;
-  // align-content: center;
-  gap: 1.5rem;
-  // grid-gap:1rem
-  // display: flex;
-  // flex-direction: column;
   // align-items: start;
-  // justify-content: center;
-  // gap: 1rem;
+  // justify-items: start;
+  justify-content: center;
+  gap: 1.5rem;
   &__logo {
     justify-self: center;
     height: 3rem;
   }
+  &__btn{
+    justify-self: start;
+    align-self: start;
+  }
   // &__seenon{
   &__seenon-text {
     display: grid;
-    font-size: 1.5rem;
+    font-size: 1.6rem;
     color: $color-grey-light-2;
     grid-template-columns: 1fr max-content 1fr;
-    // align-items: center;
-    gap: 2rem;
+    align-items: center;
+    gap: 1.5rem;
     &::before,
     &::after {
       content: "";
-      height: 8px;
+      height: 1px;
       display: block;
-      background-color: #fff;
+      background-color: currentColor;
     }
   }
   &__seenon-logos {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     justify-items: center;
-    align-items: center;
+    gap: 3rem;
+    // align-items: center;
     img {
       filter: brightness(70%);
       max-height: 2.5rem;
