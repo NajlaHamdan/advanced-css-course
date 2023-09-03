@@ -21,7 +21,7 @@ here we use the same packge for compile and watch sass files
 npm-run-all tasksName spreated by comma
 
 ## important note
- this line of code should be in the htnl file at head;
+ this line of code should be in the html file at head;
   responsive web design does not work with this line,
   this line say our website should be rendered with width of the device
   width of the content should be the device content
